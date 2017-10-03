@@ -1,2 +1,2 @@
-# cons-le.log
+# console.log
 Soothing consolation while you code
