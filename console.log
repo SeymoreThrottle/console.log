@@ -1,0 +1,15 @@
+var orig = console.log;
+console.log = function() {
+    var msgs = [],
+    consolations = ["  ˁ˚ᴥ˚ˀ you're doing a really great job", "  ˁ˚ᴥ˚ˀ I believe in you", "  ˁ˚ᴥ˚ˀ you've got this champ", "  ˁ˚ᴥ˚ˀ believe in yourself"];
+    for(var i = 0; i <= arguments.length; i++){
+    		if(i === arguments.length || arguments.length === 1){
+        	msgs.push([].shift.call(arguments) + consolations[(Math.floor(Math.random() * (consolations.length)) + 0)] );
+        }else{
+        	msgs.push([].shift.call(arguments));
+        }
+    }
+    orig.apply(console, msgs);
+};
+
+console.log("I'm terrible");
